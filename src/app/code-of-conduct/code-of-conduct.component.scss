@@ -1,0 +1,33 @@
+ ol,li,h3,p
+ {
+     font-family: "Bahnschrift SemiBold", sans-serif;
+}
+.conduct{
+    background-image: url('../../assets/img/background-03.png');
+    background-size: cover;
+     object-fit: cover;
+}
+.container
+{
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.button { 
+    height: 100px;
+    position: relative;
+  }
+  
+  .center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+  button{
+      padding-left: 20px;
+      padding-right: 20px;
+    }

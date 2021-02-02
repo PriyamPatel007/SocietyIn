@@ -1,0 +1,155 @@
+<div class="testbox">
+
+  <nav class="navbar sticky-top navbar-light bg-light">
+   
+    <a class="navbar-brand" routerLink="" style="font-size: 30px; text-align: center;"><mat-icon routerLink="">backspace</mat-icon> Society</a>
+  </nav>
+    <div class="container bg-light">
+      <div class="form_head pt-1">
+        <h3 class="mt-4 p-4 mx-3">Volunteer Form</h3>
+      </div>
+      <form  class="mt-3 needs-validation" #f="ngForm" (ngSubmit)="get(f)">
+        <div class="form-title">
+          <h4>Applicant Details</h4>
+        </div>
+        <div class="Form_name mt-3">
+          <label for="validationCustom01" class="form-label">Name <span class="text-danger">*</span>
+          </label>
+          <input ngModel  name="Username" #Username="ngModel" class="form-control form-control-sm" type="text" placeholder="Name" required />
+          <div class="alert alert-danger" *ngIf="Username.touched && Username.errors?.required || isVisible">Name is required</div>
+
+        </div>
+
+        <div class="Form_name mt-3">
+          <label for="validationCustom01" class="form-label">Mobile Number <span class="text-danger">*</span>
+          </label>
+          <input ngModel name="mobile_1" #mobile_1="ngModel" class="form-control form-control-sm" type="tel" placeholder="Mobile Number" id="validationCustom01" required />
+          <div class="alert alert-danger" *ngIf="mobile_1.touched && mobile_1.errors?.required || isVisible">Mobile Number is required</div>
+        </div>
+
+        <div class="Form_name mt-3">
+          <label for="validationCustom01" class="form-label">Alternate Mobile Number
+          </label>
+          <input ngModel name="mobile_2" class="form-control form-control-sm" type="tel" placeholder="Alternate Mobile Number" id="validationCustom01"/>
+        </div>
+
+        <div class="Form_name mt-3">
+          <label  for="validationCustom01" class="form-label">Email Id
+          </label>
+          <input ngModel name="emailid" #emailid="ngModel" class="form-control form-control-sm" type="email" placeholder="Email" id="validationCustom01" required />
+        </div>
+
+        <div class="Form_name mt-3">
+          <label for="validationCustom01" class="form-label">Address <span class="text-danger">*</span>
+          </label>
+          <input ngModel name="address" #address="ngModel" class="form-control form-control-sm" type="text" placeholder="Address" id="validationCustom01" required />
+          <div class="alert alert-danger" *ngIf="address.touched && address.errors?.required || isVisible">Address is required</div>
+        </div>
+
+        <div class="Form_name mt-3">
+          <label for="validationCustom01" class="form-label">Area <span class="text-danger">*</span>
+          </label>
+          <input ngModel name="area" #area="ngModel" class="form-control form-control-sm" type="text" placeholder="Area" id="validationCustom01" required />
+         <div class="alert alert-danger" *ngIf="area.touched && area.errors?.required || isVisible">Area required</div>
+        </div>
+
+        <div class="Form_name mt-3">
+          <label for="validationCustom01" class="form-label">City <span class="text-danger">*</span>
+          </label>
+          <input ngModel name="city" #city="ngModel" class="form-control form-control-sm" type="text" placeholder="City" id="validationCustom01" required />
+          <div class="alert alert-danger" *ngIf="city.touched && city.errors?.required || isVisible">City required</div>
+        </div>
+
+        <div class="Form_name mt-3">
+          <label for="validationCustom01" class="form-label">Pin Code <span class="text-danger">*</span>
+          </label>
+          <input ngModel name="zip" #zip="ngModel" class="form-control form-control-sm" type="text" placeholder="Pin Code" id="validationCustom01" required />
+          <div class="alert alert-danger" *ngIf="zip.touched && zip.errors?.required || isVisible">Zip Code required</div>
+        </div>
+
+        <div class="Form_name mt-3">
+          <label for="validationCustom01" class="form-label">Qualification <span class="text-danger">*</span>
+          </label>
+          <input ngModel name="qualification" #qualification="ngModel" class="form-control form-control-sm" type="text" placeholder="Qualification" id="validationCustom01"
+            required />
+            <div class="alert alert-danger" *ngIf="qualification.touched && qualification.errors?.required || isVisible">Qualification required</div>
+        </div>
+
+        <div class="Form_name mt-3">
+          <label for="validationCustom01" class="form-label">Profession
+          </label>
+          <input ngModel name="profession" #profession="ngModel" class="form-control form-control-sm" type="text" placeholder="Profession" id="validationCustom01"/>
+        </div>
+
+        <div class="Form_name mt-3">
+          <label for="validationCustom01" class="form-label">Facebook Profile Link
+          </label>
+          <input ngModel name="facebook" #facebook="ngModel" class="form-control form-control-sm" type="text" placeholder="Facebook Profile Link" id="validationCustom01" />
+        </div>
+
+        <div class="Form_name mt-3">
+          <label for="validationCustom01" class="form-label">Twitter Profile Link
+          </label>
+          <input ngModel name="twitter" #twitter="ngModel" class="form-control form-control-sm" type="text" placeholder="Twitter Profile Link" id="validationCustom01" />
+        </div>
+
+        <div class="Form_name mt-3">
+          <label for="validationCustom01" class="form-label">Instagram Profile Link
+          </label>
+          <input ngModel name="instagram" #instagram="ngModel" class="form-control form-control-sm" type="text" placeholder="Instagram Profile Link"
+            id="validationCustom01" />
+        </div>
+
+        <div class="Form_name mt-3">
+          <label for="validationCustom01" class="form-label">How are would you like to contribute so Society in Care ?<span
+              class="text-danger">*</span>
+          </label>
+          <input ngModel name="contribute" #contribute="ngModel" class="form-control form-control-sm" type="text" placeholder="" id="validationCustom01" required />
+          <div class="alert alert-danger" *ngIf="contribute.touched && contribute.errors?.required || isVisible">Write your views</div>
+        </div>
+
+        <div class="Form_name mt-3">
+          <label for="validationCustom01" class="form-label">How much time can devote to Society in Care?<span
+              class="text-danger">*</span>
+          </label>
+          <input ngModel name="hours" #hours="ngModel" class="form-control form-control-sm" type="text" placeholder="Hours" id="validationCustom01" required />
+          <div class="alert alert-danger" *ngIf="hours.touched && hours.errors?.required || isVisible">Hours should be greater than 0</div>
+
+          <input ngModel name="days" #days="ngModel" class="form-control form-control-sm mt-2" type="text" placeholder="Days" id="validationCustom01" required />
+          <div class="alert alert-danger" *ngIf="days.touched && days.errors?.required || isVisible">Days should be greater than 0</div>
+
+        </div>
+
+      <p class="mt-3"><span class="text-danger">*</span>  Required</p>  
+    
+        <button class="btn btn-primary" type="submit" [disabled]="!f.valid ? true : null" data-toggle="modal" data-target="#exampleModalCenter">
+          Send
+        </button>
+        &nbsp;&nbsp;
+        <button class="btn btn-primary" type="submit" routerLink="" data-toggle="modal">
+          Back
+        </button>
+
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">Saved Data</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+           <h6> Thanks for your message. Your data has been saved </h6>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+    <br>
+    </div>
+</div>
